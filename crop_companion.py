@@ -50,3 +50,29 @@ def get_season(date):
 date = datetime.date.today()
 print(date)
 print(get_season(date))  # Output: Winter
+
+data = [
+    ["Crop", "Season", "Market Price (INR per kg)", "Area Grown"],
+    ["Rice", "Kharif", "18-20", "West Bengal, Punjab, Uttar Pradesh"],
+    ["Wheat", "Rabi", "16-18", "Punjab, Haryana, Uttar Pradesh"],
+    ["Maize", "Kharif", "14-16", "Karnataka, Andhra Pradesh, Maharashtra"],
+    ["Sugarcane", "Kharif", "2.8-3", "Uttar Pradesh, Maharashtra, Karnataka"],
+    ["Cotton", "Kharif", "50-55", "Gujarat, Maharashtra, Telangana"],
+    ["Mustard", "Rabi", "40-45", "Rajasthan, Haryana, Madhya Pradesh"],
+    ["Groundnut", "Kharif", "40-45", "Gujarat, Andhra Pradesh, Tamil Nadu"],
+    ["Soybean", "Kharif", "35-40", "Madhya Pradesh, Maharashtra, Rajasthan"],
+    ["Tea", "Kharif", "150-200", "Assam, West Bengal, Tamil Nadu"],
+    ["Coffee", "Kharif", "120-150", "Karnataka, Kerala, Tamil Nadu"],
+    ["Tomato", "Kharif", "20-25", "Maharashtra, Karnataka, Andhra Pradesh"],
+    ["Onion", "Kharif", "15-20", "Maharashtra, Karnataka, Gujarat"],
+    ["Potato", "Rabi", "10-15", "Uttar Pradesh, West Bengal, Bihar"],
+    ["Chilli", "Kharif", "80-100", "Andhra Pradesh, Karnataka, Maharashtra"],
+    ["Turmeric", "Kharif", "60-70", "Telangana, Maharashtra, Tamil Nadu"],
+    ["Banana", "Perennial", "30-40", "Tamil Nadu, Maharashtra, Gujarat"],
+    ["Mango", "Perennial", "50-70", "Uttar Pradesh, Andhra Pradesh, Maharashtra"],
+    ["Papaya", "Perennial", "20-30", "Karnataka, Maharashtra, Gujarat"],
+    ["Pomegranate", "Perennial", "80-100", "Maharashtra, Karnataka, Gujarat"],
+    ["Grapes", "Perennial", "60-80", "Maharashtra, Karnataka, Tamil Nadu"],
+    ["Apple", "Perennial", "100-150", "Himachal Pradesh, Jammu & Kashmir, Uttarakhand"],
+    ["Pineapple", "Perennial", "30-40", "West Bengal, Assam, Kerala"]
+]
