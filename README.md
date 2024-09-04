@@ -1,1 +1,1 @@
-# crop_companion
+# crop_wise
