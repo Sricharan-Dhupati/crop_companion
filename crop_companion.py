@@ -1,9 +1,8 @@
-import requests
-from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 import requests
 from bs4 import BeautifulSoup
 import datetime
+# from translate import Translator
 
 # headers = {"UserAgent": UserAgent().random}
 
@@ -139,20 +138,27 @@ def get_crop_suggestions(state, season):
 
 def main():
     state = input("Enter your state: ")
-    if state:
-        print(f"State: {state}")
-        get_weather(state)
-        season = get_season(datetime.date.today())
-        print(f"Current Season: {season}")
-        crop_suggestions = get_crop_suggestions(state, season)
-        print("Crop Suggestions (sorted by market price):")
-        for crop in crop_suggestions:
-            print(f"{crop['Crop']} - {crop['Market Price (INR per kg)']} INR per kg")
-    else:
-        print("Invalid phone number or unable to determine the state.")
+    try:
+        if state:
+            print(f"State: {state}")
+            get_weather(state)
+            season = get_season(datetime.date.today())
+            print(f"Current Season: {season}")
+            crop_suggestions = get_crop_suggestions(state, season)
+            print("Crop Suggestions (sorted by market price):")
+            for crop in crop_suggestions:
+                print(f"{crop['Crop']} - {crop['Market Price (INR per kg)']} INR per kg")
+        else:
+            print("Unable to determine the state.")
+
+    except Exception:
+        print("Invalid state name!")
+        exit(0)
 
 if __name__ == "__main__":
     main()
 
-
+# translator= Translator(to_lang="Telugu")
+# translation = translator.translate("Good Morning!")
+# print (translation)
 
